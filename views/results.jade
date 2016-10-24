@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title results
+
+  body
+    block content
+      link(rel='stylesheet', href='http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css')
+      script(src='http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js')
+      script(src='http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js')
+      
+    h2= title
+        ul.nav.nav-pills
+          li.active
+            a(href='/')
+              | 数据首页 
+              span.badge 1
+          li
+            a(class={active: currentUrl === '/'} href='queryAll') 
+              | 数据查询
+          li
+            a(class={active: currentUrl === '/'} href='query?id=1')
+              | 定向查询
+          li
+            a(class={active: currentUrl === '/'} href='addUser?name=xyz&age=18')
+              | 数据插入
+          li
+            a(class={active: currentUrl === '/'} href='deleteUser?id=0') 
+              | 数据删除
+        br
+
+      p
+      #myCarousel.carousel.slide
+        // 轮播（Carousel）指标
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+          li(data-target='#myCarousel', data-slide-to='3')
+          li(data-target='#myCarousel', data-slide-to='4')
+        // 轮播（Carousel）项目
+        .carousel-inner
+          .item.active        
+            img(src='/images/slide1.png', width='150%', height='50.00%', alt='') 
+          .item
+            img(src='/images/slide2.png', width='150%', height='50.00%', alt='') 
+          .item
+            img(src='/images/slide3.png', width='150%', height='50.00%', alt='') 
+          .item
+            img(src='/images/slide4.png', width='150%', height='50.00%', alt='') 
+          .item
+            img(src='/images/slide5.png', width='150%', height='50.00%', alt='') 
+
+        // 轮播（Carousel）导航
+        a.carousel-control.left(href='#myCarousel', data-slide='prev') ‹
+        a.carousel-control.right(href='#myCarousel', data-slide='next') ›
+
+      .container
+        table.table.table-striped
+          caption 查询结果:
+          thead
+              tr
+              - for(var i=0; i<th.length;++i){
+                th #{th[i]}
+              -}
+          tbody
+              - for(var i=0; i<id.length;++i){
+              tr
+                td #{id[i]}
+                td #{name[i]}
+                td #{age[i]}
+              - }
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  p

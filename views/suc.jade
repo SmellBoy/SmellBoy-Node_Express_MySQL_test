@@ -1,0 +1,31 @@
+block content
+    script(src='http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js')
+    script(src='http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css')
+
+    h1= 更新用户资料
+    ul.nav.nav-pills
+      li.active
+        a(href='/')
+          | 数据操作首页
+          span.badge 1
+      li
+        a(class={active: currentUrl === '/'} href='queryAll') 
+          | 数据查询
+      li
+        a(class={active: currentUrl === '/'} href='query?id=1')
+          | 定向查询
+      li
+        a(class={active: currentUrl === '/'} href='addUser?name=xyz&age=18')
+          | 数据插入
+      li
+        a(class={active: currentUrl === '/'} href='deleteUser?id=0') 
+          | 数据删除
+    br
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    p
+
+
+  h1 操作成功！
+  pre #{JSON.stringify(result)}
