@@ -23,3 +23,6 @@ git push
 
 # 建议采用 ssh的方式 clone github上面的repository
 git clone git@github.com:SmellBoy/项目名称.git
+git config --global push.default simple
+git config --global credential.helper wincred
+git config --list # 列出配置表
