@@ -1,7 +1,7 @@
 git int
 git status
 git add .
-git commit -m "first commit"
+git commit -m "Signed-off-by: smellboy <jarnar@qq.com>"
 git remote -v
 git push -u origin master
 
