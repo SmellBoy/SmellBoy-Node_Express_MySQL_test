@@ -1,13 +1,21 @@
-git int
-git status
-git add .
-git commit -m "anything"
-git remote -v
+# 将本地文件夹同步到github
+git int # 初始化文件夹，生成git文件
+git status # 查看状态，建议经常使用
+git add . # 一次性添加所有文件
+git commit -m "first commit"
 git push -u origin master
 
-git log
+ssh -T -p 443 git@ssh.github.com # 使用https时候不用输入密码
 
+# 当完成认证后，日常修改命令足够
+# 日常修改命令
+git log -5 # 查看5条log
+git remote -v # 查看远程repository 
 git status
-git add .
+git diff HEAD^ HEAD # 比较两次修改
+
+git add <文件名，包括后缀> # 添加修改文件
+git diff # 比较修改地方
 git commit -m "..."
 git push
+
