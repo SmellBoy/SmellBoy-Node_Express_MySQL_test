@@ -1,0 +1,8 @@
+git int
+git status
+git add .
+git commit -m "first commit"
+git remote -v
+git push -u origin master
+
+git log
