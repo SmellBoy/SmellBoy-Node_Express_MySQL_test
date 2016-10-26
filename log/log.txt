@@ -1,8 +1,13 @@
 git int
 git status
 git add .
-git commit -m "Signed-off-by: smellboy <jarnar@qq.com>"
+git commit -m "anything"
 git remote -v
 git push -u origin master
 
 git log
+
+git status
+git add .
+git commit -m "..."
+git push
